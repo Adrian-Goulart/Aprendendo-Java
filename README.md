@@ -1,6 +1,6 @@
 # Aprendendo-Java
 
-***Curso Maratona Virado no Jiraya***
+[***Curso Maratona Virado no Jiraya***](https://www.youtube.com/playlist?list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW)
 
 Estou escrevendo o que estou aprendendo nas aulas do [DevDojo](https://www.youtube.com/@DevDojoBrasil). Aulas não citadas significam que já tenho conhecimento do conteúdo apresentado.
 #### 02 - Como Java Funciona
@@ -24,3 +24,23 @@ contador++;
 ```
 
 A ordem de colocação dos sinais tem interferência no modo como é executado, enquanto for posicionado depois, será adicionado um valor somente se algo for feito em relação a variável, já quando posicionado antes será adicionado um valor sem a necessidade da variável passar por uma ação.
+
+### 20 - Estruturas Condicionais pt 01 - IF
+
+O operador de negação (!), tem a mesma função que a comparação para um valor false, exemplo:
+
+```java
+boolean bool = true;  
+if (bool == false) {  
+    System.out.println("Não executado");  
+}
+```
+
+É a mesma coisa que:
+
+```java
+boolean bool = true;  
+if (!bool) {  
+    System.out.println("Não executado");  
+}
+```
