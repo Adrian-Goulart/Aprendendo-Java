@@ -44,3 +44,7 @@ if (!bool) {
     System.out.println("Não executado");  
 }
 ```
+
+### 25 - Estruturas Condicionais pt 06 - Switch
+
+O Switch suporta somente os tipos char, int, byte, short, enum e String.
