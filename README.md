@@ -55,3 +55,7 @@ Por meio dos comentários aprendi que a partir do Java 14 tem o switch expressio
 ### 27 - Estruturas de Repetição pt 01 - Laços de repetição while, do while, for
 
 O ```do while``` mesmo se a condição for falsa ela é executada ao menos uma vez , caso verdadeira continuará a ser executada até cumprir sua condição.
+
+### 31 - Estruturas de Repetição pt 05 - Continue
+
+O `continue` é o contrário do `break`, ele volta ao início da repetição e continua executando dentro do loop, quando condição estiver satisfeita, executa o resto do loop.
