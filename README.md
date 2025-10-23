@@ -51,3 +51,7 @@ O Switch suporta somente os tipos char, int, byte, short, enum e String.
 ### 26 - Estruturas Condicionais pt 07 - Switch exercício
 
 Por meio dos comentários aprendi que a partir do Java 14 tem o switch expression, uma maneira mais fácil e bonita da antiga maneira de tirar vantagem de uma funcionalidade do switch no qual na ausência de um ```break;``` ele continua executando. 
+
+### 27 - Estruturas de Repetição pt 01 - Laços de repetição while, do while, for
+
+O ```do while``` mesmo se a condição for falsa ela é executada ao menos uma vez , caso verdadeira continuará a ser executada até cumprir sua condição.
