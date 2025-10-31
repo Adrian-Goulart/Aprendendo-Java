@@ -78,10 +78,10 @@ O `continue` é o contrário do `break`, ele volta ao início da repetição e c
 Arrays são sempre do tipo *reference* (e somente tipos de referência podem ser inicializados com valor nulo). Por terem mais de um valor sua nomenclatura é sempre no plural. Arrays são declaradas da seguinte forma:
 
 ```java
-int [] numbers = new int [x];
+String [] numbers = new String [x];
 ```
 
-O **x** representa o número de itens comportados pela lista.
+O **x** representa o número de itens comportados pela lista. (Não é possível utilizar o `new` diretamente em tipos primitivos)
 
 ---
 ### 33 - Arrays pt 02
@@ -93,4 +93,8 @@ Valores padrões do tipos:
 * String = null
 
 ---
-	
+### 34 - Arrays pt 03
+
+O tamanho do array não pode ser alterado dinamicamente, contudo ele é um *objeto* e logo possui métodos.
+
+Caso eu chame novamente uma lista, o espaço da referência antiga é perdida.
