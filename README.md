@@ -127,4 +127,22 @@ for (String character : letters) {
 
 ---
 
-### 
+### 36 - Arrays Multidimensionais pt 01
+
+Os arrays multidimensionais são como arrays de arrays. Para criar arrays multidimensionais basta adicionar mais colchetes (pode-se ter várias):
+
+```Java
+int[][] num = new int[3][3];
+```
+
+O primeiro valor nos colchetes a direita equivale ao tamanho do array **base**, os demais são as posições dentro deste array base e assim por diante.
+
+Logo para percorrer esta lista fazemos:
+
+```Java
+for (int i = 0; i < num.length; i++) {
+	for (int x = 0; x < num[0].length; x++) {
+		System.out.println(num[i][x]);
+	}
+}
+```
