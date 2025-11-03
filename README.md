@@ -78,7 +78,7 @@ O `continue` é o contrário do `break`, ele volta ao início da repetição e c
 Arrays são sempre do tipo *reference* (e somente tipos de referência podem ser inicializados com valor nulo). Por terem mais de um valor sua nomenclatura é sempre no plural. Arrays são declaradas da seguinte forma:
 
 ```java
-String [] numbers = new String [x];
+int[] numbers = new int [x];
 ```
 
 O **x** representa o número de itens comportados pela lista. (Não é possível utilizar o `new` diretamente em tipos primitivos)
@@ -98,3 +98,33 @@ Valores padrões do tipos:
 O tamanho do array não pode ser alterado dinamicamente, contudo ele é um *objeto* e logo possui métodos.
 
 Caso eu chame novamente uma lista, o espaço da referência antiga é perdida.
+
+---
+
+### 35 - Arrays pt 04 - Foreach
+
+Um array também pode ser inicializado desta forma:
+
+```Java
+String[] letters = {"A", "D", "R", "I", "A", "N"};
+```
+
+Ou
+
+```Java
+char[] letters = new char[]{"A", "D", "R", "I", "A", "N"};
+```
+
+Dessa maneira já informando os valores e tamanho da lista.
+
+O `foreach` funciona do seguinte modo para percorrer uma lista:
+
+```Java
+for (String character : letters) {
+	System.out.println(num);
+}
+```
+
+---
+
+### 
