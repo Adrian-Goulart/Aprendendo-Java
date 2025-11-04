@@ -27,3 +27,10 @@ public class Episodio implements Classificavel{
 ## 03. Classificando episódios e filmes
 
 A interface não pode ser criada como um objeto e sim apenas referenciada.
+
+---
+
+# Curso Java: trabalhando com listas e coleções de dados
+
+---
+

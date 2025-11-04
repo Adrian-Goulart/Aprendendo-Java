@@ -81,7 +81,7 @@ Arrays são sempre do tipo *reference* (e somente tipos de referência podem ser
 int[] numbers = new int [x];
 ```
 
-O **x** representa o número de itens comportados pela lista. (Não é possível utilizar o `new` diretamente em tipos primitivos)
+O ***x*** representa o número de itens comportados pela lista. (Não é possível utilizar o `new` diretamente em tipos primitivos).
 
 ---
 ### 33 - Arrays pt 02
@@ -106,13 +106,13 @@ Caso eu chame novamente uma lista, o espaço da referência antiga é perdida.
 Um array também pode ser inicializado desta forma:
 
 ```Java
-String[] letters = {"A", "D", "R", "I", "A", "N"};
+char[] letters = {'A', 'D', 'R', 'I', 'A', 'N'};
 ```
 
 Ou
 
 ```Java
-char[] letters = new char[]{"A", "D", "R", "I", "A", "N"};
+char[] letters = new char[]{'A', 'D', 'R', 'I', 'A', 'N'};
 ```
 
 Dessa maneira já informando os valores e tamanho da lista.
@@ -146,3 +146,49 @@ for (int i = 0; i < num.length; i++) {
 	}
 }
 ```
+
+---
+
+### 38 - Arrays Multidimensionais pt 03 - Inicialização
+
+Para inicializar um array multidimensional precisamos fazer:
+
+```Java
+int[][] arrayInt = new int[3][];
+
+arrayInt[0] = new int[3];
+arrayInt[1] = new int[6];
+arrayInt[2] = new int[9];
+```
+
+E para entender ficar melhor visualizando, o que pode-se ser feito com o seguinte código:
+
+```Java
+for (int[] arrayBase : arrayInt) {
+	System.out.println("\n------");
+	for (int num : arrayBase){
+		System.out.print(num + " ");
+	}
+}
+```
+
+Também pode-se ser inicializada desta forma, já informando os valores:
+
+```Java
+arrayInt[0] = new int[]{1, 2, 3};
+arrayInt[1] = new int[]{1, 2, 3, 4, 5, 6};
+
+// Ou assim
+
+int array = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+arrayInt[2] = array;
+```
+
+E para inicializar de maneira direta, faremos:
+
+```Java
+int[][] arrayInt2 = {{1, 2, 3}, {1, 2, 3, 4, 5, 6}}
+```
+
+---
