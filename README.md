@@ -202,3 +202,61 @@ O `return` pode-se ser utilizado como um `break` para métodos do tipo void.
 Quando se passa variáveis de tipo primitivo dentro de classes, a variável original nunca será alterada, independentemente do que aconteça dentro do método. O que acontece é que cria-se uma cópia e passa para uma nova variável de referência que está sendo criada dentro do método.
 
 ---
+
+# 52 - Orientação Objetos - Métodos pt 09 - Varargs
+
+O VarArgs é indicado com `int...`, ele funciona de maneira similar a um array, sua diferença está na hora da chamada, por exemplo em uma função de somar os números de uma lista:
+
+Com array:
+```Java
+public class Calculator {  
+    public void SumList(int[] list) {  
+        int sum = 0;  
+        for ( int num : list) {  
+            sum += num;  
+        }  
+        System.out.println(sum);  
+    }  
+}
+```
+
+Chamada:
+```Java
+public class Main {  
+    public static void main(String[] args) {  
+        Calculator calculadora = new Calculadora();  
+        calculator.SumList(new int[] {1, 2, 3, 4, 5, 6});  
+    }  
+}
+
+// Resultado 21
+```
+
+Já com VarArgs:
+```Java
+public class Calculadora {  
+    public void SumList(int... list) {  
+        int sum = 0;  
+        for ( int num : list) {  
+            sum += num;  
+        }  
+        System.out.println(sum);  
+    }  
+}
+```
+
+Chamada:
+```Java
+public class Main {  
+    public static void main(String[] args) {  
+        Calculadora calculadora = new Calculadora();  
+        calculadora.SumList(1,2,3,4,5,6);
+    }
+}
+
+// Resultado 21
+```
+
+Vale ressaltar que nada pode-se ser colocado após o VarAngs, porque ele não identifica aonde seria o fim da lista, contudo é possível coloca-lo antes.
+
+---
