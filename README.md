@@ -120,8 +120,8 @@ Dessa maneira já informando os valores e tamanho da lista.
 O `foreach` funciona do seguinte modo para percorrer uma lista:
 
 ```Java
-for (String character : letters) {
-	System.out.println(num);
+for (char character : letters) {
+	System.out.println(character);
 }
 ```
 
