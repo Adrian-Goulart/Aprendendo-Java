@@ -192,3 +192,13 @@ int[][] arrayInt2 = {{1, 2, 3}, {1, 2, 3, 4, 5, 6}}
 ```
 
 ---
+# 47 - Orientação Objetos - Métodos pt 04 - Retorno pt 02
+
+O `return` pode-se ser utilizado como um `break` para métodos do tipo void.
+
+---
+# 48 - Orientação Objetos - Métodos pt 05 - Parâmetros tipo primitivo
+
+Quando se passa variáveis de tipo primitivo dentro de classes, a variável original nunca será alterada, independentemente do que aconteça dentro do método. O que acontece é que cria-se uma cópia e passa para uma nova variável de referência que está sendo criada dentro do método.
+
+---
