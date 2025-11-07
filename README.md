@@ -257,6 +257,6 @@ public class Main {
 // Resultado 21
 ```
 
-Vale ressaltar que nada pode-se ser colocado após o VarAngs, porque ele não identifica aonde seria o fim da lista, contudo é possível coloca-lo antes.
+Vale ressaltar que nada pode-se ser colocado após o VarArgs, porque ele não identifica aonde seria o fim da lista, contudo é possível coloca-lo antes.
 
 ---
