@@ -36,7 +36,7 @@ A interface não pode ser criada como um objeto e sim apenas referenciada.
 
 ---
 
-# Lista de Filmes com ArrayList
+# 03 Lista de Filmes com ArrayList
 
 O ArrayList é uma lista, sua sintaxe é:
 
@@ -47,3 +47,14 @@ ArrayList<x> lista = new ArrayList();
 Onde ***x*** é o tipo da lista.
 
 Para chamar seu tamanho utiliza-se `.size()` e para pegar o valor de um index, utilizamos `.get().metodo()`.
+
+---
+# 05 Para saber mais: arrays no Java
+
+O array (não ArrayList) possuem algumas desvantagens, sendo:
+
+* Tamanho fixo: seu tamanho é fixo, ou seja, não pode ser alterado;
+* Ausência de Métodos: os arrays não possuem métodos como os de inserção, remoção ou pesquisa de elementos de forma eficiente.
+
+---
+
