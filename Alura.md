@@ -58,3 +58,6 @@ O array (não ArrayList) possuem algumas desvantagens, sendo:
 
 ---
 
+# 06 Entendendo a hierarquia de classes e métodos
+
+Todas as classes são "filhas" de uma outra chamada `objects`, nesta aula foi reforçada o método `.toString` e como altera-lo, uma vez que todas as classes herdam de `objects` basta substituir o método `toString`.
