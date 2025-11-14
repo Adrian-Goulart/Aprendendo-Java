@@ -25,7 +25,7 @@ public class Episodio implements Classificavel{
 
 ---
 
-## 03. Classificando episódios e filmes
+### 03. Classificando episódios e filmes
 
 A interface não pode ser criada como um objeto e sim apenas referenciada.
 
@@ -35,8 +35,8 @@ A interface não pode ser criada como um objeto e sim apenas referenciada.
 # Java: trabalhando com listas e coleções de dados
 
 ---
-
-# 03 Lista de Filmes com ArrayList
+# 01. Coleção de Filmes
+### 03 Lista de Filmes com ArrayList
 
 O ArrayList é uma lista, sua sintaxe é:
 
@@ -49,7 +49,7 @@ Onde ***x*** é o tipo da lista.
 Para chamar seu tamanho utiliza-se `.size()` e para pegar o valor de um index, utilizamos `.get().metodo()`.
 
 ---
-# 05 Para saber mais: arrays no Java
+### 05 Para saber mais: arrays no Java
 
 O array (não ArrayList) possuem algumas desvantagens, sendo:
 
@@ -57,7 +57,13 @@ O array (não ArrayList) possuem algumas desvantagens, sendo:
 * Ausência de Métodos: os arrays não possuem métodos como os de inserção, remoção ou pesquisa de elementos de forma eficiente.
 
 ---
-
-# 06 Entendendo a hierarquia de classes e métodos
+### 06 Entendendo a hierarquia de classes e métodos
 
 Todas as classes são "filhas" de uma outra chamada `objects`, nesta aula foi reforçada o método `.toString` e como altera-lo, uma vez que todas as classes herdam de `objects` basta substituir o método `toString`.
+
+---
+
+# 02. Construindo Objetos
+## 05 Definindo outras formas de construir filmes e séries
+
+Não há herança de construtores, para isso é necessário reescrever o construtor nas classes "filhas". Os construtores trazem informações "vitais" para o objeto
