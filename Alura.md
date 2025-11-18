@@ -67,3 +67,19 @@ Todas as classes são "filhas" de uma outra chamada `objects`, nesta aula foi re
 ## 05 Definindo outras formas de construir filmes e séries
 
 Não há herança de construtores, para isso é necessário reescrever o construtor nas classes "filhas". Os construtores trazem informações "vitais" para o objeto
+
+---
+
+# 03. Lista de Objetos distintos
+
+## 04 Identificando o Objeto
+
+Variáveis de referência é algo que se utiliza para "chegar" a um objeto, por exemplo:
+
+```Java
+Objeto pessoa = new Objeto();
+
+Objeto ps = pessoa;
+```
+
+O que acontece neste caso é como se as duas variáveis estivessem apontando para onde é o objeto e não criando um objeto em si no caso da terceira linha, com isso, o que é alterado é somente a forma de como se referencia ao objeto. A criação de um objeto só se deve a partir do `new`.
