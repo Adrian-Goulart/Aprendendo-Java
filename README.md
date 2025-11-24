@@ -260,3 +260,10 @@ public class Main {
 Vale ressaltar que nada pode-se ser colocado após o VarArgs, porque ele não identifica aonde seria o fim da lista, contudo é possível coloca-lo antes.
 
 ---
+
+# 56 - Orientação Objetos - Modificador de acesso private, get e set pt 03
+
+Não é recomendado a chamadas dos métodos `get` dentro do próprio atributo e sim usar o `this.`, afinal ele retornará o valor em memória.
+
+---
+
