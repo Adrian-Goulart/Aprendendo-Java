@@ -267,3 +267,9 @@ Não é recomendado a chamadas dos métodos `get` dentro do próprio atributo e 
 
 ---
 
+# 57 - Orientação Objetos - Sobrecarga de métodos
+
+A sobrecarga de métodos são métodos com o mesmo nome e a quantidade **OU** o tipo dos parâmetros diferentes. Também é demonstrada a utilização de um método que funciona de maneira similar (para não falar idêntico) a um construtor.
+
+---
+
