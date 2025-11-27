@@ -273,3 +273,15 @@ A sobrecarga de métodos são métodos com o mesmo nome e a quantidade **OU** o 
 
 ---
 
+# 59 - Orientação Objetos - Construtores pt 02 - Sobrecarga
+
+É possível também utilizar a sobrecarga em construtores, mas para se referir a um outro construtor é utilizado o `this();` e se necessário, argumentos. Vale ressaltar que isto funciona somente para construtores
+
+---
+
+# 60 - Orientação Objetos - Blocos de inicialização
+
+A execução dos objetos começam antes mesmo da execução dos construtores e os blocos de inicialização também. Os blocos de inicialização também são chamados de instância e são executados sempre na criação de um objeto, Também aprendi que há diferentes usos dos construtores, ou seja, posso ter duas maneiras ou mais de "inicializar" com construtores.
+
+---
+
