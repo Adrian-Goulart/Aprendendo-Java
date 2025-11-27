@@ -285,3 +285,26 @@ A execução dos objetos começam antes mesmo da execução dos construtores e o
 
 ---
 
+# 61 - Orientação Objetos - Modificador static
+
+O modificador de acesso `static` vai fazer com que o atributo pertença a classe, logo todos os objetos iram compartilhar seu valor. Importante citar que não é recomendado o uso do `this` para acessar um atributo estático e sim a utilização do próprio objeto, exemplo:
+
+```Java
+public class Episodio {
+	private String nome;
+	private int episodios;
+	public static int epLimite = 24;
+	private int temporadas;
+	
+	public void imprime() {
+		System.out.println("Episódios: " + this.episodios);
+		System.out.println("Temporadas: " + this.temporadas);
+		System.out.println("Episódios Limite: " + Episodio.epLimite);
+	}
+	
+	// Outros códigos
+}
+```
+
+---
+
