@@ -308,3 +308,9 @@ public class Episodio {
 
 ---
 
+# 62 - Orientação Objetos - Métodos estáticos
+
+Não pode-se adicionar nenhuma variável estática a um método não estático, mas o contrário é possível. É recomendado utilizar métodos estáticos quando o método não acessa uma variável.
+
+---
+
