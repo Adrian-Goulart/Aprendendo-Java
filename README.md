@@ -314,3 +314,17 @@ Não pode-se adicionar nenhuma variável estática a um método não estático, 
 
 ---
 
+# 63 - Orientação Objetos - Bloco de inicialização estático
+
+Blocos de inicialização podem ser estáticas, com isso ela é executada apenas uma vez quando a classe é executada pela JVM, dessa forma economizando processamento. Caso haja mais de um bloco de inicialização estático eles são executados em ordem.
+
+Acho importante trazer uma anotação da aula:
+
+0. Bloco de inicialização é executado quando a JVM carrega a classe
+1. Alocado espaço em memória pro objeto
+2. Cada atributo da classe é criado e inicializado com valores default ou que for atribuído
+3. Bloco de inicialização é executado
+4. Construtor é executado
+
+---
+
