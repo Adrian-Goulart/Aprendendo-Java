@@ -328,3 +328,8 @@ Acho importante trazer uma anotação da aula:
 
 ---
 
+# 65 - Orientação Objetos - Associação pt 02 - Associação unidirecional um para muitos
+
+A associação unidirecional é algo que referencia a outro em que este outro não referencia ao algo, simplificando, um objeto chamado *Integrante* referencia a outro objeto chamado *Guilda*, mas *Guilda* não referencia a *Integrante*.
+
+---
