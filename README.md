@@ -333,3 +333,10 @@ Acho importante trazer uma anotação da aula:
 A associação unidirecional é algo que referencia a outro em que este outro não referencia ao algo, simplificando, um objeto chamado *Integrante* referencia a outro objeto chamado *Guilda*, mas *Guilda* não referencia a *Integrante*.
 
 ---
+
+# 66 - Orientação Objetos - Associação pt 03 - Associação unidirecional muitos para um
+
+Segue a lógica do item anterior, mas desta vez *Integrantes* seria uma lista de integrantes na Guilda
+
+---
+
