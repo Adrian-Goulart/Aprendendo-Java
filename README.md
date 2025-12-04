@@ -275,7 +275,7 @@ A sobrecarga de métodos são métodos com o mesmo nome e a quantidade **OU** o 
 
 # 59 - Orientação Objetos - Construtores pt 02 - Sobrecarga
 
-É possível também utilizar a sobrecarga em construtores, mas para se referir a um outro construtor é utilizado o `this();` e se necessário, argumentos. Vale ressaltar que isto funciona somente para construtores
+É possível também utilizar a sobrecarga em construtores, mas para se referir a um outro construtor é utilizado o `this();` e se necessário, argumentos. Vale ressaltar que isto funciona somente para construtores.
 
 ---
 
@@ -336,7 +336,16 @@ A associação unidirecional é algo que referencia a outro em que este outro n�
 
 # 66 - Orientação Objetos - Associação pt 03 - Associação unidirecional muitos para um
 
-Segue a lógica do item anterior, mas desta vez *Integrantes* seria uma lista de integrantes na Guilda
+Segue a lógica do item anterior, mas desta vez *Integrantes* seria uma lista de integrantes na Guilda.
 
 ---
 
+# 67 - Orientação Objetos - Associação pt 04 - Associação bidirecional
+
+Ambos objetos se associam.
+
+---
+
+# 72 - Orientação Objetos - Herança pt 02 - Super
+
+Em heranças se utiliza-se a palavra `super` para se referir a classe **superior**.
