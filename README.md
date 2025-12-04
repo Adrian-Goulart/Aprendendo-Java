@@ -358,3 +358,20 @@ O `protected` é um modificador de acesso em que está disponível para uso em u
 
 ---
 
+# 75 - Orientação Objetos - Herança pt 05 - Sequência de inicialização
+
+Atualização da ordem de inicialização:
+
+0. Bloco de inicialização estático da superclasse é executado quando JVM carregar a classe pai.
+1. Bloco de inicialização estático da sub classe é executado quando JVM carregar a classe filha.
+2. Alocado espaço em memória pro objeto da superclasse.
+3. Cada atributo da superclasse é criado e inicializado com os valores padrões ou os valores passados.
+4. Blocos de inicialização da superclasse é executado em ordem.
+5. Construtor da superclasse executado.
+6. Alocado espaço em memória pro objeto da subclasse.
+7. Cada atributo da subclasse é criado e inicializado com os valores padrões ou os valores passados.
+8. Blocos de inicialização da subclasse é executado em ordem.
+9. Construtor da subclasse executado.
+
+---
+
