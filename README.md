@@ -349,3 +349,12 @@ Ambos objetos se associam.
 # 72 - Orientação Objetos - Herança pt 02 - Super
 
 Em heranças se utiliza-se a palavra `super` para se referir a classe **superior**.
+
+---
+
+# 73 - Orientação Objetos - Herança pt 03 - protected
+
+O `protected` é um modificador de acesso em que está disponível para uso em um escopo da classe, subclasse e pacote, mas não o escopo global.
+
+---
+
