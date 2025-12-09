@@ -375,3 +375,26 @@ Atualização da ordem de inicialização:
 
 ---
 
+# 76 - Orientação Objetos - Sobrescrita do método toString
+
+O toString é uma maneira de imprimir informações da classe.
+
+Algumas regras de sobrescrita, o nome e parâmetros têm de ser iguais, e o modificador de acesso não pode ser mais restritivo, ou seja, se for um private, a sobrescrita pode ser pública, mas não o contrário.   
+
+---
+
+# 77 - Orientação Objetos - Modificador final pt 01 - Tipo primitivo
+
+Para criar uma constante no Java utilizamos o modificador `final` e tem que ser obrigatoriamente inicializado (construtores, inicializadores e atribuição direta por exemplo), além de que, geralmente por seu valor não mudar, associamos ela juntamente com o modificador `static`. Vale lembrar que para constantes sua nomenclatura é diferente, sendo ela toda em *UPCASE* e espaços separados por *underline* ( _ ), como pode-se observar:
+
+```Java
+public class NaveEspacial {
+	public TipoNave;
+	public static final double VELOCIDADE_LIMITE = 300000;
+	
+	// Resto do código
+}
+```
+
+---
+
