@@ -398,3 +398,14 @@ public class NaveEspacial {
 
 ---
 
+# 78 - Orientação Objetos - Modificador final pt 02 - Tipo referência
+
+Em um caso de um objeto constante dentro de outro objeto, este não poderá ser alterado, pois a referência a ele é imutável, mas seus valores sim podem ser alterados. Também foi dito nesta aula que normalmente constantes seguem o padrão ***singleton pattern***.
+
+---
+
+# 79 - Orientação Objetos - Modificador final pt 03 - Classes e métodos
+
+O modificador `final` utilizado em uma classe está diretamente ligado a herança, a  classe com este modificador não poderá ser estendida (*extends*), o mesmo vale para métodos, o método que tiver o modificador `final` não poderá ser sobrescrito.
+
+---
