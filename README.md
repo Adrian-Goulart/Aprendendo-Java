@@ -430,3 +430,55 @@ Para comparação de Strings, é recomendado o uso de `.equals` e não o compara
 
 ---
 
+# 81 - Orientação Objetos - Enumeração pt 02 - Construtores e atributos
+
+O `enum` também pode ser feito dentro da classe, mas por questões de organização não é recomendado e para referencia-lo é necessário passar a *classe, enum, tipo*, caso tiver um *import*, não é necessário passar a classe. 
+
+Atributos também podem ser criados dentro de enumerables, para passar um valor é necessário criar um construtor (enumerables ainda são classes), o seu valor não pode vir antes das enumerações.
+
+```Java
+public enum TipoClasse {
+	MAGO(1),
+	CURANDEIRO(2),
+	GUERREIRO(3),
+	PALADINO(4),
+	ASSASINO(5),
+	ARQUEIRO(6),
+	BARDO(7)
+	
+	public final int VALOR;
+	
+	TipoClasse(int valor) {
+		this.VALOR = valor;
+	}
+}
+```
+
+ou
+
+```Java
+￼public enum TipoClasse {
+	MAGO(1),
+	CURANDEIRO(2),
+	GUERREIRO(3),
+	PALADINO(4),
+	ASSASINO(5),
+	ARQUEIRO(6),
+	BARDO(7)
+	
+	private int valor;
+	
+	TipoClasse(int valor) {
+		this.valor = valor;
+	}
+	
+	public int getValor{
+		return valor;
+	}
+}
+```
+
+Dessa forma se trabalha de forma mais intuitiva para as pessoas desenvolvendo.
+
+---
+
