@@ -480,6 +480,8 @@ ou
 
 Dessa forma se trabalha de forma mais intuitiva para as pessoas desenvolvendo.
 
+Vale lembrar que também podemos fazer isso com mais de um tipo para enumeração.
+
 ---
 
 # 82 - Orientação Objetos - Enumeração pt 03 - Sobrescrita de métodos
@@ -510,5 +512,46 @@ Evitando utilizar if.
 
 ---
 
+# 83 - Orientação Objetos - Enumeração pt 04 - Busca por atributos
 
+Para retornar uma enumerable a partir de uma string (no qual ambas se baseiam), podemos utilizar o `.valueOf`, mas ele não retorna baseado no tipo e sim no nome da enumeração, então pode-se criar um  método para iterar sobre todos os tipos das enumerações utilizando o `values()`.
 
+```Java
+public enum TipoClasse {  
+    MAGO(1, "Mago"),  
+    CURANDEIRO(2, "Curandeiro"),  
+    GUERREIRO(3, "Guerreiro"),  
+    PALADINO(4, "Paladino"),  
+    ASSASINO(5, "Assasino"),  
+    ARQUEIRO(6, "Arqueiro"),  
+    BARDO(7, "Bardo");  
+  
+    public final int VALOR;  
+    public final String NOME_CLASSE;  
+  
+    TipoClasse(int valor, String nomeClasse) {  
+        this.VALOR = valor;  
+        this.NOME_CLASSE = nomeClasse;  
+    }  
+  
+    public static TipoClasse classePorNomeClasse(String nomeClasse) {  
+        for (TipoClasse tipoClasse : values()) {  
+            if (tipoClasse.NOME_CLASSE.equals(nomeClasse)) {  
+                return tipoClasse;  
+            }  
+        }  
+        return null;  
+    }  
+}
+```
+
+Execução:
+
+```Java
+TipoClasse tipoClasse2 = TipoClasse.classePorNomeClasse("Assasino"); 
+System.out.println(tipoClasse2);
+
+// Saída: ASSASINO
+```
+
+---
