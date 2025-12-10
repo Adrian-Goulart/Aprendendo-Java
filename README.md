@@ -409,3 +409,24 @@ Em um caso de um objeto constante dentro de outro objeto, este não poderá ser 
 O modificador `final` utilizado em uma classe está diretamente ligado a herança, a  classe com este modificador não poderá ser estendida (*extends*), o mesmo vale para métodos, o método que tiver o modificador `final` não poderá ser sobrescrito.
 
 ---
+
+# 80 - Orientação Objetos - Enumeração pt 01 - Introdução
+
+A classe `enum` (enumerable) é utilizada quando se tem uma escolha em uma quantidade limitada de opções, na qual se deseja forçar o uso do tipo. Ele é uma classe onde seus atributos são constantes, logo basta somente escrever o nome da
+constante, por exemplo:
+
+```Java
+public enum TipoClasse {
+	MAGO,
+	GUERREIRO,
+	PALADINO,
+	ASSASINO,
+	ARQUEIRO,
+	BARDO
+}
+```
+
+Para comparação de Strings, é recomendado o uso de `.equals` e não o comparador `==`. 
+
+---
+
