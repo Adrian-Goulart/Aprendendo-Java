@@ -482,3 +482,33 @@ Dessa forma se trabalha de forma mais intuitiva para as pessoas desenvolvendo.
 
 ---
 
+# 82 - Orientação Objetos - Enumeração pt 03 - Sobrescrita de métodos
+
+O construtor de um enum é privado, pois quem chama o construtor é a enumeração.
+
+Podemos também utilizar métodos em enumerações, como no exemplo apresentado na aula para calcular o desconto sobre o tipo de pagamento. Para isso será necessário criar um métodos dentro do enum e sobrescreve-los nas enumerações. O método não necessita de um corpo, logo será abstrato.
+
+```java
+public enum TipoPagamento {
+	DEBITO {
+		@Override
+		public double calcularDesconto(double valor) {
+			return valor * 0.1;
+		}
+	}, CREDITO {
+		@Override
+		public double calcularDesconto(double valor) {
+			return valor * 0.05;
+		}
+	}
+	
+	public static double calcularDesconto(double valor);
+}
+```
+
+Evitando utilizar if.
+
+---
+
+
+
