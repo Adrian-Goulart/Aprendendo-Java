@@ -570,3 +570,9 @@ Classes abstratas podem ter variáveis e métodos abstratos ou não abstratos, m
 
 ---
 
+# 86 - Orientação Objetos - Classes abstratas pt 03 - Métodos abstratos regras
+
+Classes abstratas que estendem de classes abstratas não precisam implementar o método abstrato, mas a primeira classe que estende dessa classe abstrata precisa implementar seu método abstrato. Caso o método for implementado dentro da classe abstrata, as demais classes concretas estendidas não precisaram mais implementá-la.
+
+---
+
