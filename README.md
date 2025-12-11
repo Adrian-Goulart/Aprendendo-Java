@@ -561,3 +561,12 @@ System.out.println(tipoClasse2);
 Classes abstratas basicamente servem para serem superclasses para suas implementações.  Ela em si não existe e sim suas extensões.
 
 ---
+
+# 85 - Orientação Objetos - Classes abstratas pt 02 - Métodos abstratos
+
+Métodos abstratos servem para forçar o uso dela em classes estendidas.
+
+Classes abstratas podem ter variáveis e métodos abstratos ou não abstratos, mas classes concretas não podem ter métodos ou variáveis abstratas.
+
+---
+
