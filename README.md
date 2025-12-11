@@ -555,3 +555,9 @@ System.out.println(tipoClasse2);
 ```
 
 ---
+
+# 84 - Orientação Objetos - Classes abstratas pt 01
+
+Classes abstratas basicamente servem para serem superclasses para suas implementações.  Ela em si não existe e sim suas extensões.
+
+---
