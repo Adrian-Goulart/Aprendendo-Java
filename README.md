@@ -457,7 +457,7 @@ public enum TipoClasse {
 ou
 
 ```Java
-￼public enum TipoClasse {
+public enum TipoClasse {
 	MAGO(1),
 	CURANDEIRO(2),
 	GUERREIRO(3),
@@ -525,16 +525,16 @@ public enum TipoClasse {
     ASSASINO(5, "Assasino"),  
     ARQUEIRO(6, "Arqueiro"),  
     BARDO(7, "Bardo");  
-  
+    
     public final int VALOR;  
     public final String NOME_CLASSE;  
-  
+    
     TipoClasse(int valor, String nomeClasse) {  
         this.VALOR = valor;  
         this.NOME_CLASSE = nomeClasse;  
     }  
-  
-    public static TipoClasse classePorNomeClasse(String nomeClasse) {  
+    
+    public static TipoClasse classePorNomeClasse(String nomeClasse){ 
         for (TipoClasse tipoClasse : values()) {  
             if (tipoClasse.NOME_CLASSE.equals(nomeClasse)) {  
                 return tipoClasse;  
@@ -573,6 +573,31 @@ Classes abstratas podem ter variáveis e métodos abstratos ou não abstratos, m
 # 86 - Orientação Objetos - Classes abstratas pt 03 - Métodos abstratos regras
 
 Classes abstratas que estendem de classes abstratas não precisam implementar o método abstrato, mas a primeira classe que estende dessa classe abstrata precisa implementar seu método abstrato. Caso o método for implementado dentro da classe abstrata, as demais classes concretas estendidas não precisaram mais implementá-la.
+
+---
+
+# 87 - Orientação Objetos - Interfaces pt 01 - Introdução
+
+A *interface* funciona de forma parecida com classes abstratas. Seus métodos por padrão são `public abstract`, logo não é necessário passar esta informação, ficando desta forma:
+
+```Java
+public interface DataLoader {
+	void load();
+}
+```
+
+Por serem abstratos, não pode-se criar um corpo.
+
+Para implementa-lá em outra classe, utilizamos o `implements` invés do `extends`.
+
+```Java
+public class DatabaseLoader implements DataLoader {
+	@Override
+	public void load() {
+		// código
+	}
+}
+```
 
 ---
 
