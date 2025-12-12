@@ -594,10 +594,30 @@ Para implementa-lá em outra classe, utilizamos o `implements` invés do `extend
 public class DatabaseLoader implements DataLoader {
 	@Override
 	public void load() {
-		// código
+		// Código
 	}
 }
 ```
+
+---
+
+# 88 - Orientação Objetos - Interfaces pt 02 - Implementando múltiplas interfaces
+
+Uma vantagem da interface, é que não há limite para a quantidade de implementação dela na classe.
+
+Outra diferença da interface é que se é possível criar métodos concretos nela, a partir do modificador `default`.
+
+```Java
+public interface DataLoader {
+	void load();
+	
+	default void checkPermission() {
+		// Código
+	}
+}
+```
+
+Por padrão ele já vem público.
 
 ---
 
