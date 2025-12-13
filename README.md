@@ -488,7 +488,7 @@ Vale lembrar que também podemos fazer isso com mais de um tipo para enumeraçã
 
 O construtor de um enum é privado, pois quem chama o construtor é a enumeração.
 
-Podemos também utilizar métodos em enumerações, como no exemplo apresentado na aula para calcular o desconto sobre o tipo de pagamento. Para isso será necessário criar um métodos dentro do enum e sobrescreve-los nas enumerações. O método não necessita de um corpo, logo será abstrato.
+Podemos também utilizar métodos em enumerações, como no exemplo apresentado na aula para calcular o desconto sobre o tipo de pagamento. Para isso será necessário criar um método dentro do enum e sobrescrevê-los nas enumerações. O método não necessita de um corpo, logo será abstrato.
 
 ```java
 public enum TipoPagamento {
@@ -618,6 +618,28 @@ public interface DataLoader {
 ```
 
 Por padrão ele já vem público.
+
+Se não sobrescrito ela é executada no nível da interface.
+
+---
+
+# 89 - Orientação Objetos - Interfaces pt 03 - Atributos e métodos estáticos
+
+Não é possível criar um objeto através de uma interface, mas podemos decorar o tipo dela.
+
+O modificador de acesso nunca poder ser mais restritivo do que a superclasse, ordem:
+
+`private -> default -> protected -> public`
+
+Por padrão todas as vaiáveis da interface são constantes.
+
+Nela também é possível criar métodos estáticos 
+
+---
+
+# 91 - Orientação Objetos - Polimorfismo pt 02 - Funcionamento
+
+O polimorfismo significa múltiplas formas, isto significa, trocar o tipo da variável de referência e continuar utilizando outros objetos, somente aplicado na herança.
 
 ---
 
