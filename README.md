@@ -318,6 +318,8 @@ Não pode-se adicionar nenhuma variável estática a um método não estático, 
 
 Blocos de inicialização podem ser estáticas, com isso ela é executada apenas uma vez quando a classe é executada pela JVM, dessa forma economizando processamento. Caso haja mais de um bloco de inicialização estático eles são executados em ordem.
 
+Os blocos não estáticos são executados a cada criação de objeto.
+
 Acho importante trazer uma anotação da aula:
 
 0. Bloco de inicialização é executado quando a JVM carrega a classe
@@ -327,6 +329,8 @@ Acho importante trazer uma anotação da aula:
 4. Construtor é executado
 
 Nota: a posição 0 na lista, diz respeito a blocos de inicialização estáticos.
+
+Métodos e variáveis estáticas tem prioridade no carregamento.
 
 ---
 
@@ -510,7 +514,7 @@ public enum TipoPagamento {
 }
 ```
 
-Evitando utilizar if.
+Desta forma evitando utilizar if.
 
 ---
 
@@ -642,6 +646,12 @@ Nela também é possível criar métodos estáticos
 # 91 - Orientação Objetos - Polimorfismo pt 02 - Funcionamento
 
 O polimorfismo significa múltiplas formas, isto significa, trocar o tipo da variável de referência e continuar utilizando outros objetos, somente aplicado na herança.
+
+---
+
+# 92 - Orientação Objetos - Polimorfismo pt 03 - Parâmetros polimórficos
+
+Nesta aula é apresentada a ideia de que ao invés de se criar um método para cada classe, pode-se criar um método genérico, assim sendo um código mais limpo e estendendo-se mais facilmente.
 
 ---
 
