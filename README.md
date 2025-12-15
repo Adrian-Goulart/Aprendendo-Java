@@ -655,3 +655,6 @@ Nesta aula é apresentada a ideia de que ao invés de se criar um método para c
 
 ---
 
+# 93 - Orientação Objetos - Polimorfismo pt 04 - Cast e instanceof
+
+Sobre o instanceOf, ele analisa se um objeto é uma instância de outro objeto, assim retornando *true* ou *false*. Também é necessário ficar de olho se o tipo da variável que está sendo feita o cast é uma instância dela.
