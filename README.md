@@ -658,3 +658,75 @@ Nesta aula é apresentada a ideia de que ao invés de se criar um método para c
 # 93 - Orientação Objetos - Polimorfismo pt 04 - Cast e instanceof
 
 Sobre o instanceOf, ele analisa se um objeto é uma instância de outro objeto, assim retornando *true* ou *false*. Também é necessário ficar de olho se o tipo da variável que está sendo feita o cast é uma instância dela.
+
+---
+
+# 94 - Orientação Objetos - Polimorfismo pt 05 - Programação orientada a interface
+
+A programação orientada a interface permite utilizar o tipo mais genérico para poder implementar em qualquer classe que implemente-a. Por exemplo:
+
+Pasta 1: Repositorio (Interface)
+
+```Java
+public interface Repositorio{
+	void salvar();
+}
+```
+
+Pasta 2: RepositorioBancoDeDados
+
+```Java
+public class RepositorioBancoDeDados implements Repositorio {
+	@Override
+	public void salvar() {
+		System.out.println("Salvando em Banco de Dados");
+	}
+}
+```
+
+Pasta 3: RepositorioArquivo
+
+```Java
+public class RepositorioArquivo implements Repositorio {
+	@Override
+	public void salvar() {
+		System.out.println("Salvando em Arquivo");
+	}
+}
+```
+
+Pasta 4: RepositorioMemoria
+
+```Java
+public class RepositorioMemoria implements Repositorio {
+	@Override
+	public void salvar() {
+		System.out.println("Salvando na Memoria");
+	}
+}
+```
+
+Executável: RepositorioTeste
+
+```Java
+public class RepositorioTeste {  
+    public static void main(String[] args) {  
+	    
+        Repositorio repo1 = new RepositorioBancoDeDados();
+        Repositorio repo2 = new RepositorioArquivo();
+        Repositorio repo3 = new RepositorioMemoria();
+        
+        repo1.salvar();
+        repo2.salvar();
+        repo3.salvar();
+        
+        // Saída:
+        // Salvando em Banco de dados
+        // Salvando em Arquivo
+        // Salvando na Memoria
+    }  
+}
+```
+
+---
+
