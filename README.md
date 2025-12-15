@@ -326,6 +326,8 @@ Acho importante trazer uma anotação da aula:
 3. Bloco de inicialização é executado
 4. Construtor é executado
 
+Nota: a posição 0 na lista, diz respeito a blocos de inicialização estáticos.
+
 ---
 
 # 65 - Orientação Objetos - Associação pt 02 - Associação unidirecional um para muitos
