@@ -7,7 +7,7 @@ Estou escrevendo o que estou aprendendo nas aulas do [DevDojo](https://www.youtu
 ---
 #### 02 - Como Java Funciona
 
-O Java possui a vantagem de escrever apenas uma vez e rodar em qualquer lugar, o arquivo em que escrevemos é um arquivo .java, para rodar em outros sistemas o arquivo passa por uma compilação (javac) onde passa a ser um arquivo .class (Bytecode), no qual a partir do JVM (Java Virtual Machine) consegue se comunicar com os outros sistemas, sendo que cada Sistema Operacional tem sua JVM. Para desenvolver aplicações em Java é utilizado o JDK (Java Development Kit) em que possui uma JVM, compilador e ferramentas que servem de ajuda ao desenvolvedor.
+O Java possui a vantagem de escrever apenas uma vez e rodar em qualquer lugar, o arquivo em que escrevemos é um arquivo *.java*, para rodar em outros sistemas o arquivo passa por uma compilação (javac) onde passa a ser um arquivo *.class* (Bytecode), no qual a partir do JVM (Java Virtual Machine) consegue se comunicar com os outros sistemas, sendo que cada Sistema Operacional tem sua JVM. Para desenvolver aplicações em Java é utilizado o JDK (Java Development Kit) em que possui uma JVM, compilador e ferramentas que servem de ajuda ao desenvolvedor.
 
 ---
 #### 15 - Operadores pt 01 - Relacionais
@@ -438,7 +438,7 @@ Para comparação de Strings, é recomendado o uso de `.equals` e não o compara
 
 # 81 - Orientação Objetos - Enumeração pt 02 - Construtores e atributos
 
-O `enum` também pode ser feito dentro da classe, mas por questões de organização não é recomendado e para referencia-lo é necessário passar a *classe, enum, tipo*, caso tiver um *import*, não é necessário passar a classe. 
+O `enum` também pode ser feito dentro da classe, mas por questões de organização não é recomendado e para referencia-lo é necessário passar a *classe, enum, tipo*. Caso tiver um *import*, não é necessário passar a classe. 
 
 Atributos também podem ser criados dentro de enumerables, para passar um valor é necessário criar um construtor (enumerables ainda são classes), o seu valor não pode vir antes das enumerações.
 
@@ -543,9 +543,9 @@ public enum TipoClasse {
     public static TipoClasse classePorNomeClasse(String nomeClasse){ 
         for (TipoClasse tipoClasse : values()) {  
             if (tipoClasse.NOME_CLASSE.equals(nomeClasse)) {  
-                return tipoClasse;  
-            }  
-        }  
+                return tipoClasse;
+            }
+        }
         return null;  
     }  
 }
@@ -726,6 +726,26 @@ public class RepositorioTeste {
         // Salvando na Memoria
     }  
 }
+```
+
+---
+
+# 95 - Exceções pt 01 - Errors
+
+Os erros são coisas que acontecem na JVM e que provavelmente não será possível resolver com o código em execução. Podemos simular isto com erro StackOverflowError:
+
+```Java
+public class StackOverflowError {  
+    public static void main(String[] args) {  
+        Error();  
+    }  
+	 
+    public static void Error() {  
+        Error();  
+    }  
+}
+
+// Saída: Exception in thread "main" java.lang.StackOverflowError
 ```
 
 ---
