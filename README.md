@@ -823,3 +823,106 @@ File file = new File("arquivo\\Novo-Aquivo.txt");
 
 ---
 
+# 98 - Exceções pt 04 - Lançando exceção unchecked
+
+Exceções uncheckeds são exceções Runtime. 
+
+Para lançar uma exceção Runtime, foi utilizado de exemplo a divisão por 0.
+
+```Java
+public class ArithmeticExeptionTest {
+    public static void main(String[] args) {
+        System.out.println(division(10, 0));
+    }
+	
+    public static int division(int x, int y) {
+        return x / y;
+    }
+}
+
+// Saída: Exception in thread "main" java.lang.ArithmeticException: / by zero
+```
+
+Quando acessamos a classe *ArithmeticException*, podemos ver que ela é Runtime e exceções Runtime, não é obrigatório o tratamento, somente caso queira. Para isso, utilizaremos o `try` e `catch`.
+
+```Java
+public class ArithmeticExeptionTest {  
+    public static void main(String[] args) {  
+        System.out.println(division(10, 0));  
+    }  
+	
+    public static int division(int x, int y) {  
+        try {  
+            return x/y;  
+        } catch (RuntimeException e){  
+            e.printStackTrace();  
+        }  
+        return 0;  
+    }  
+}
+```
+
+Assim, tentará retornar a divisão, se não for possível, é mostrado o log de erro, mas por se tratar de um método com retorno obrigatório, é possível utilizar o `return` após o `try` e `catch`, porque o código ainda continua carregando. 
+
+Por se tratar de uma divisão, sabe-se que não é possível dividir por 0, logo podemos adicionar uma condição no início da execução, e caso verdadeira, podemos lançar uma exceção com `throw new`.
+
+```java
+public class ArithmeticExeptionTest {  
+    public static void main(String[] args) {  
+        System.out.println(division(10, 0));  
+    }  
+    
+    public static int division(int x, int y) {  
+        if (y == 0) {  
+            throw new IllegalArgumentException("Argumento ilegal, não pode ser 0");  
+        }  
+        return x/y;  
+    }  
+}
+```
+
+Desta maneira, se for divisão por 0, lançará uma exceção argumentando que não é possível a divisão por 0. É muito importante que a exceção seja a mais específica possível para ajudar no entendimento do código.
+
+
+Pode-se informar a quem for utilizar o método que existe a possibilidade de `IllegalArgumentException`, utilizando-se do `throws` ficando da seguinte forma:
+
+```Java
+public class ArithmeticExeptionTest {  
+    public static void main(String[] args) {  
+        System.out.println(division(10, 0));  
+    }  
+	
+    public static int division (int x, int y) throws IllegalArgumentException {  
+        if (y == 0) {  
+            throw new IllegalArgumentException("Argumento ilegal, não pode ser 0");  
+        }  
+        return x/y;  
+    }  
+}
+```
+
+E também por meio dos comentários:
+
+```Java
+public class ArithmeticExeptionTest {
+    public static void main(String[] args) {
+        System.out.println(division(10, 0));
+    }
+	
+    /**
+     *     * @param x
+     * @param y não pode ser 0
+     * @return
+     * @throws IllegalArgumentException caso y for 0
+     */
+	
+    public static int division (int x, int y) throws IllegalArgumentException {
+        if (y == 0) {
+            throw new IllegalArgumentException("Argumento ilegal, não pode ser 0");
+        }
+        return x/y;
+    }
+}
+```
+
+Com o atalho *CTRL + Q* é possível verificarmos estas informações.
