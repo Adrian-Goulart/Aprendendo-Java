@@ -731,6 +731,7 @@ public class RepositorioTeste {
 ---
 
 # 95 - Exceções pt 01 - Errors
+O Erro e a Exceção são filhas da classe **Throwable**.
 
 Os erros são coisas que acontecem na JVM e que provavelmente não será possível resolver com o código em execução. Podemos simular isto com erro StackOverflowError:
 
@@ -747,6 +748,16 @@ public class StackOverflowError {
 
 // Saída: Exception in thread "main" java.lang.StackOverflowError
 ```
+
+---
+
+# 96 - Exceções pt 02 - RuntimeException
+
+É muito importante saber a diferença entre ***Erro*** e ***Exceção***. O erro *lançado* (Throwable) é uma subclasse de *Error*, e quando a exceção é *lançada*, significa que são filhas de *Exception*.
+
+Existem dois tipos de exceções, *Checked* e *Unchecked*. As exceções *checked* são diretamente filhas da classe Exception, se não tratadas, é lançado um erro em tempo de execução, assim nem conseguindo compilar o código. As unchecked (RuntimeException), quando lançadas, na maioria dos casos é erro de desenvolvimento.
+
+[Aqui podemos verificar as subclasses da RuntimeException](https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html)
 
 ---
 
