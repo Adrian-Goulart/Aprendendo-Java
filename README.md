@@ -761,3 +761,65 @@ Existem dois tipos de exceções, *Checked* e *Unchecked*. As exceções *checke
 
 ---
 
+# 97 - Exceções pt 03 - Exception
+
+Nesta foi feito um teste de exceção *IOException*, para isso é necessário criar um arquivo. Para criar um arquivo criaremos um objeto da classe *File* informando o caminho do arquivo (pode mudar dependendo do Sistema Operacional) e logo após um de seus métodos.
+
+**Teoricamente** ficaria assim:
+```Java
+public class IoExceptionTest {  
+    public static void main(String[] args) {  
+          
+    }  
+	
+    public static void criarArquivo() {  
+        File file = new File("arquivo/Novo-Aquivo.txt");  
+        file.createNewFile();  
+    }  
+}
+```
+
+Este código apresenta uma exceção do tipo *Checked*, que não está sendo tratada, nos forçando a fazer uma tratativa. Precisamos falar para o Java que ele tente fazer algo, caso não der, pegar uma exceção. Podemos fazer isto com o `try {} catch() {}`.
+
+Ficando desta forma:
+```Java
+public class IoExceptionTest {
+    public static void main(String[] args) {
+        createArchive();
+    }
+	
+    public static void createArchive() {
+        File file = new File("arquivo/Novo-Aquivo.txt");
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		
+    }
+}
+```
+
+Desta maneira, será executada o método `createArchive`, no qual criará um objeto arquivo e em seguida **tentará** criar o arquivo em si, caso possível, o arquivo será criado, se não for possível,  ele mostrará o log do erro no console. (Para testar isso é necessário alterar a permissão da pasta).
+
+**Adendos**:
+
+ * No ``try {} catch() {}`` caso a exceção não for *Runtime*, a exceção no bloco do `catch () {}` tem que ser uma no qual o código o bloco do `try` seja possível de ser lançada. Podemos verificar isto dentro do método `createNewFile` na parte ***throws IOException***. Também é possível utilizar a classe `Exception` pois ela é genérica, assim tratando de tudo, o que **NÃO É RECOMENDADO**, isto porque, no bloco do `try`, não se utiliza várias regras de negócios e se utilizado o `Exception`, será difícil saber de qual exceção se trata.
+ 
+ * EVITAR utilizar lógica de negócio no `catch`, pois ele é utilizado somente para se lidar com exceções.
+ 
+ * **NUNCA DEIXE O BLOCO** `catch` **EM BRANCO**, pois assim você não avisa que está havendo uma exceção.
+ 
+ * Sempre leia a StackTrace.
+
+Outros:
+
+* É possível modificar o tipo do arquivo.
+
+* Para utilizar barra invertida na string basta adicionar duas barras invertidas:
+```Java
+File file = new File("arquivo\\Novo-Aquivo.txt");
+```
+
+---
+
